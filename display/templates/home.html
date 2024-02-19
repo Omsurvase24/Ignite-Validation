@@ -16,6 +16,17 @@
                 <th>Payment Id</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Contact</th>
+                <th>College Name</th>
+                <th>College Department</th>
+                <th>Event Name</th>
+                <th>Payment ID</th>
+                <th>Team Members</th>
+                <th>Team Member 1</th>
+                <th>Team Member 2</th>
+                <th>Team Member 3</th>
+                <th>Type of Event</th>
+                <th>Payment Screenshot</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +35,17 @@
                 <td><a href = "{% url "info" %}">{{i.payment_id}}</a></td>
                 <td>{{i.first_name}} {{i.last_name}}</td>
                 <td>{{i.email}}</td>
+                <td>{{i.contact}}</td>
+                <td>{{i.college_name}}</td>
+                <td>{{i.college_department}}</td>
+                <td>{{i.event_name}}</td>
+                <td>{{i.payment_id}}</td>
+                <td>{{i.team_members}}</td>
+                <td>{{i.teammember1}}</td>
+                <td>{{i.teammember2}}</td>
+                <td>{{i.teammember3}}</td>
+                <td>{{i.is_team_event}}</td>
+                <td>{{i.payment_screenshot}}</td>
             </tr>
             {% endfor %}
         </tbody>

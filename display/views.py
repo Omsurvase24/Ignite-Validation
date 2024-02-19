@@ -6,7 +6,9 @@ import requests
 def home(request):
     response = requests.get(
         'https://mpulse-ignite-backend.up.railway.app/api/register').json()
-    return render(request, 'home.html', {'response': response})
+
+    sorted_response = sorted(response, key=lambda x: x.get('event_name', 0))
+    return render(request, 'home.html', {'response': sorted_response})
 
 
 def info(request):

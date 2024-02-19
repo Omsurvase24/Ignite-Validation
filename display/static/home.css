@@ -1,10 +1,10 @@
-body {
-    background: #333333;
+.body {
+    background: white;
 }
 
-h1 {
+.h1 {
     text-align: center;
-    color: #ddd;
+    color: black;
 }
 
 table {
