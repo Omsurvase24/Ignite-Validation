@@ -1,8 +1,4 @@
-.body {
-    background: white;
-}
-
-.h1 {
+h1 {
     text-align: center;
     color: black;
 }
@@ -19,9 +15,11 @@ td {
     text-align: left;
     border-bottom: 1px solid #ddd;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 200px;
+}
+
+td img {
+    max-width: 100%;
+    height: auto;
 }
 
 th {

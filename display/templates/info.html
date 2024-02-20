@@ -1,1 +1,21 @@
-LOL
+<html lang="en">
+<head>
+  <!-- Add your head content here -->
+</head>
+<body>
+  <h1 class="m-3">Details for {{ entry.first_name }} {{ entry.last_name }}</h1>
+  <p>{{entry.email}}</p>
+  <p>{{entry.contact}}</p>
+  <p>{{entry.college_name}}</p>
+  <p>{{entry.college_department}}</p>
+  <p>{{entry.event_name}}</p>
+  <p>{{entry.payment_id}}</p>
+  <p>{{entry.team_members}}</p>
+  <p>{{entry.teammember1}}</p>
+  <p>{{entry.teammember2}}</p>
+  <p>{{entry.teammember3}}</p>
+  <p>{{entry.is_team_event}}</p>
+  <img src="{{ entry.payment_screenshot }}" alt="Payment Screenshot">
+  <!-- Display other details of the selected entry -->
+</body>
+</html>
