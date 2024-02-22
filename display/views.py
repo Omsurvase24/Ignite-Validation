@@ -9,7 +9,7 @@ def home(request):
 
     sorted_response = sorted(response, key=lambda x: x.get('event_name', 0))
     entries = [{'first_name': entry['first_name'], 'last_name': entry['last_name'],
-                'payment_id': entry['payment_id'], 'event_name': entry['event_name']} for entry in sorted_response]
+                'payment_id': entry['payment_id']} for entry in sorted_response]
 
     return render(request, 'home.html', {'entries': entries})
 
