@@ -1,7 +1,6 @@
 from django.shortcuts import render
 import requests
 # Create your views here.
-from urllib.parse import quote
 
 
 def home(request):
@@ -18,9 +17,6 @@ def home(request):
 def info(request, name, payment_id):
     response = requests.get(
         'https://mpulse-ignite-backend.up.railway.app/api/register').json()
-
-    full_name = f"{name} {payment_id}"
-    encoded_full_name = quote(full_name)
 
     selected_entry = next(
         (entry for entry in response if name in entry['first_name'] + ' ' + entry['last_name'] and entry['payment_id'] == payment_id), None)
