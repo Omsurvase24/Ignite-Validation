@@ -18,7 +18,7 @@
   <div class="list-group list-group-numbered m-3">
     <li class="list-group-item active">Name - Payment ID - Event Name</li>
       {% for entry in entries %}
-      <a href="{% url 'info' entry.first_name entry.payment_id %}" class="list-group-item list-group-item-action">{{ entry.first_name }} {{entry.last_name}} - Payment ID: {{ entry.payment_id }} - Event Name: {{entry.event_name}}</a>
+      <a href="{% url 'info' entry.first_name entry.payment_id %}" class="list-group-item list-group-item-action">{{ entry.first_name }} {{entry.last_name}} - Payment ID: {{ entry.payment_id }} - Event Name: {{entry.event_name}} - Contact: {{entry.contact}}</a>
       {% endfor %}
       </div>
 </body>
