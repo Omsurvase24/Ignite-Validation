@@ -25,8 +25,8 @@
             </tr>
         </thead>
         <tbody>
+            {% for i in response %}
             <tr>
-                {% for i in response %}
                 <td>{{i.first_name}}{{i.last_name}}</td>
                 <td>{{i.email}}</td>
                 <td>{{i.contact}}</td>
@@ -38,8 +38,8 @@
                 <td>{{i.teammember2}}</td>
                 <td>{{i.teammember3}}</td>
                 <td></td>
-                {% endfor %}
             </tr>
+            {% endfor %}
         </tbody>
     </table>
 </body>
