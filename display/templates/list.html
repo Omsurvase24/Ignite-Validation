@@ -1,0 +1,21 @@
+<!-- your_template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry List</title>
+</head>
+<body>
+    <h2>IRegistered Students List</h2>
+    <table>
+        {% for i in response %}
+            {{i.first_name}}
+            {{i.last_name}}
+            {{i.event_name}}
+            {{i.contact}}
+            {{i.payment_id}}
+        {% endfor %}
+    </table>
+</body>
+</html>

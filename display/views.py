@@ -22,3 +22,10 @@ def info(request, name, payment_id):
         (entry for entry in response if name in entry['first_name'] + ' ' + entry['last_name'] and entry['payment_id'] == payment_id), None)
 
     return render(request, 'info.html', {'entry': selected_entry})
+
+
+def listing(request):
+    response = requests.get(
+        'https://mpulse-ignite-backend.up.railway.app/api/register').json()
+
+    return render(request, 'list.html', {'response': response})
