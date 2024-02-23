@@ -7,15 +7,40 @@
     <title>Entry List</title>
 </head>
 <body>
-    <h2>IRegistered Students List</h2>
+    <h2>Registered Students List</h2>
     <table>
-        {% for i in response %}
-            {{i.first_name}}
-            {{i.last_name}}
-            {{i.event_name}}
-            {{i.contact}}
-            {{i.payment_id}}
-        {% endfor %}
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>College Name</th>
+                <th>College Department</th>
+                <th>Event Name</th>
+                <th>Payment ID</th>
+                <th>Team Member 1</th>
+                <th>Team Member 2</th>
+                <th>Team Member 3</th>
+                <th>Signature</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for i in response %}
+                <td>{{i.first_name}}{{i.last_name}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.contact}}</td>
+                <td>{{i.college_name}}</td>
+                <td>{{i.college_department}}</td>
+                <td>{{i.event_name}}</td>
+                <td>{{i.payment_id}}</td>
+                <td>{{i.teammember1}}</td>
+                <td>{{i.teammember2}}</td>
+                <td>{{i.teammember3}}</td>
+                <td></td>
+                {% endfor %}
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
