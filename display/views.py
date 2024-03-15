@@ -1,12 +1,12 @@
 from django.shortcuts import render
 import requests
-from . import api_key
 # from decouple import config
 # Create your views here.
 
 
 def home(request):
-    response = requests.get(api_key.key).json()
+    response = requests.get(
+        'https://mpulse-ignite-backend.up.railway.app/api/register').json()
 
     sorted_response = sorted(response, key=lambda x: x.get('event_name', 0))
     entries = [{'first_name': entry['first_name'], 'last_name': entry['last_name'],
@@ -16,7 +16,8 @@ def home(request):
 
 
 def info(request, name, payment_id):
-    response = requests.get(api_key.key).json()
+    response = requests.get(
+        'https://mpulse-ignite-backend.up.railway.app/api/register').json()
 
     selected_entry = next(
         (entry for entry in response if name in entry['first_name'] + ' ' + entry['last_name'] and entry['payment_id'] == payment_id), None)
@@ -25,6 +26,7 @@ def info(request, name, payment_id):
 
 
 def listing(request):
-    response = requests.get(api_key.key).json()
+    response = requests.get(
+        'https://mpulse-ignite-backend.up.railway.app/api/register').json()
 
     return render(request, 'list.html', {'response': response})
